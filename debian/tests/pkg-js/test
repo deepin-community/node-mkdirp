@@ -1,0 +1,1 @@
+tap `ls test/*.js|grep -v test/cmd|grep -v test/find-made|grep -v test/index`

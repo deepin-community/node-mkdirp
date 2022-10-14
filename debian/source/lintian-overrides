@@ -1,0 +1,4 @@
+# False positive: data
+source-is-missing tap-snapshots/test-cmd.js-TAP.test.js
+source-contains-prebuilt-javascript-object tap-snapshots/test-cmd.js-TAP.test.js
+very-long-line-length-in-source-file tap-snapshots/test-cmd.js-TAP.test.js line 13 is 619 characters long (>512)

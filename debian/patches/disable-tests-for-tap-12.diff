@@ -1,0 +1,54 @@
+Description: disable tests that require tap 14
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-03-10
+
+--- a/test/mkdirp-manual.js
++++ b/test/mkdirp-manual.js
+@@ -62,6 +62,7 @@
+   t.end()
+ })
+ 
++/*
+ t.test('read-only file system, still succeed if dir exists', t => {
+   const dir = t.testdir({ foo: {} })
+   const opt = {
+@@ -102,6 +103,7 @@
+     return mkdirpManual(`${dir}/async/a/b`, opt)
+   }).then(made => t.equal(made, undefined))
+ })
++*/
+ 
+ t.test('unknown failure types are failures', t => {
+   const opt = {
+@@ -116,6 +118,7 @@
+   return t.rejects(mkdirpManual('/x/y/z', opt), { code: 'blorg' })
+ })
+ 
++/*
+ t.test('cannot make dir over a file', t => {
+   const dir = t.testdir({ file: 'txt' })
+   const opt = {
+@@ -152,3 +155,4 @@
+   t.throws(() => mkdirpManualSync(`${dir}/file`, opt), { code: 'EEXIST' })
+   return t.rejects(mkdirpManual(`${dir}/file`, opt), { code: 'EEXIST' })
+ })
++*/
+--- a/test/mkdirp-native.js
++++ b/test/mkdirp-native.js
+@@ -28,6 +28,7 @@
+   t.end()
+ })
+ 
++/*
+ t.test('mkdirpNative calls impl and returns findMade', t => {
+   const opt = {
+     mkdirAsync: () => Promise.resolve(),
+@@ -57,6 +58,7 @@
+   return mkdirpNative(`${dir}/async/a/b/c`, opt).then(made =>
+     t.equal(made, 'mkdirpManual'))
+ })
++*/
+ 
+ t.test('other errors are raised to caller', t => {
+   const opt = {
