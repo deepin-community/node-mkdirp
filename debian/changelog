@@ -1,3 +1,29 @@
+node-mkdirp (1.0.4+~1.0.2-4) unstable; urgency=medium
+
+  [ Jérémy Lal ]
+  * node-fs-vaccum is removed from debian
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 06 Dec 2022 11:50:21 +0000
+
+node-mkdirp (1.0.4+~1.0.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Require map.js for autopkgtest
+
+ -- Yadd <yadd@debian.org>  Wed, 13 Apr 2022 16:16:03 +0200
+
+node-mkdirp (1.0.4+~1.0.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix test (Closes: #1009563):
+    + require node-tap >= 15 and enable all tests
+    + fix test snapshot
+    + don't check coverage (enabled by default with tap 15)
+  * Update lintian overrides
+  * Fix copyright
+
+ -- Yadd <yadd@debian.org>  Wed, 13 Apr 2022 16:01:20 +0200
+
 node-mkdirp (1.0.4+~1.0.2-1) unstable; urgency=medium
 
   * Team upload
