@@ -4,11 +4,13 @@ Source: https://github.com/isaacs/node-mkdirp/tags
  https://registry.npmjs.org/@types/mkdirp
 
 Files: *
-Copyright: 2010 James Halliday <mail@substack.net>
+Copyright: James Halliday <mail@substack.net>
+ Isaac Z. Schlueter <i@izs.me>
 License: Expat
 
 Files: debian/*
 Copyright: 2012 David Paleino <dapal@debian.org>
+ 2020-2022 Yadd <yadd@debian.org>
 License: Expat
 
 Files: types-*/*
